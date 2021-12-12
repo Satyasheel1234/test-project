@@ -52,7 +52,7 @@ export class DashboardComponent implements OnInit {
           }
         });
       });
-      this.labelAndIssueMapperArray.sort((a, b) => (a.DueDate > b.DueDate ? 1 : -1));
+      this.labelAndIssueMapperArray.sort((a, b) => (b.DueDate > a.DueDate ? 1 : -1));
       console.log("labelAndIssueMapperArray", this.labelAndIssueMapperArray);
     });
   }
