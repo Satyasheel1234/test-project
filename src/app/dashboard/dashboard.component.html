@@ -1,0 +1,22 @@
+<div class="row" *ngFor="let lableName of lableArray" style="margin-left: 20px;">
+  <div class="col-2" style="height: 200px;">
+    <hr />
+    <label>{{ lableName }}</label>
+  </div>
+  <div class="" *ngFor="let lableValue of labelAndIssueMapperArray">
+    <hr />
+    <div class="col-8 flip-card card-body" *ngIf="lableValue.label == lableName">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h5>{{lableValue.label }}</h5>
+          <span>Key:{{ lableValue.Key }}</span><br />
+         <span>Summary:{{ lableValue.Summary }}</span><br />
+          <span> DueDate:{{ lableValue.DueDate }}</span><br />
+        </div>
+        <div class="flip-card-back"><span>Description:{{ lableValue.Description }}</span><br />
+          <span>Estimate:{{ lableValue.originalEstimate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
